@@ -1,0 +1,40 @@
+doctype html
+html(lang="ja")
+    head
+        - var title= "サレイ"
+        - var page= "お知らせページ"
+        include _head 
+        link(rel="stylesheet", href="css/news.css")
+    body
+    //- h1要素の変数にページタイトルを入れる。
+    - var page_title ="お知らせ"
+        include header 
+        main 
+            section 
+                .newsWrapper 
+                    .imgWrapper 
+                        img(src="img/", alt="")
+                    .newsContent 
+                        time 2021.01.11
+                        h2 アップデートのお知らせ
+                        p 
+                            |お客さまに、より安心してスマートフォン・タブレットを
+                            br
+                            |ご利用いただくため、ソフトウエアの更新を実施します。
+            section 
+                .newsWrapper 
+                    .imgWrapper 
+                        img(src="img/", alt="")
+                    .newsContent 
+                        time 2021.01.11
+                        h2 アップデートのお知らせ
+                        p 
+                            |お客さまに、より安心してスマートフォン・タブレットを
+                            br
+                            |ご利用いただくため、ソフトウエアの更新を実施します。
+                            br
+                            |お客さまに、より安心してスマートフォン・タブレットを
+                            br
+                            |ご利用いただくため、ソフトウエアの更新を実施します。
+        include footer 
+    script()

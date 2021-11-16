@@ -1,0 +1,92 @@
+doctype html
+html(lang="ja")
+    head
+        - var title= "サレイ"
+        - var page= "記録ページ"
+        include _head 
+        link(rel="stylesheet", href="css/record.css")
+    body
+    //- h1要素の変数にページタイトルを入れる。
+    - var page_title ="記録する"
+        include header 
+        main 
+            h2 2021年
+            .date 
+                |6
+                span 月
+                |1
+                span 日
+                span (火)
+            .container  
+                .photo
+                    a(href="photo.html") 
+                        .wrap 
+                            img(src="img/camera_icon.png", alt="写真を撮る")
+                            p 写真を撮る 
+                .album 
+                    a(href="album.html")
+                        .wrap
+                            img(src="img/photo_icon.png", alt="アルバムから選ぶ")
+                            p アルバムから
+                                br
+                                span 選ぶ
+            .wrapper 
+                h3 お肌の調子
+                .btn_container 
+                    .bad
+                        img(src="img/badface_icon.png", alt="わるい" id="bad")
+                        #bad_p 
+                            p わるい
+                    .normal 
+                        img(src="img/normalface_icon.png", alt="ふつう" id="normal")
+                        #normal_p 
+                            p ふつう
+                    .good  
+                        img(src="img/goodface_icon.png", alt="よい" id="good")
+                        #good_p
+                            p よい
+            .wrapper 
+                h3 睡眠
+                .btn_container 
+                    .bad
+                        img(src="img/badface_icon.png", alt="わるい" id="bad")
+                        p 0~4h
+                    .normal 
+                        img(src="img/normalface_icon.png", alt="ふつう" id="normal")
+                        p 4~8h
+                    .good  
+                        img(src="img/goodface_icon.png", alt="よい" id="good")
+                        p 8h~
+            .wrapper 
+                h3 ストレス
+                .btn_container 
+                    .bad
+                        img(src="img/badface_icon.png", alt="わるい" id="bad") 
+                        p 調子がわるい
+                    .normal 
+                        img(src="img/normalface_icon.png", alt="ふつう" id="normal")
+                        p ふつう
+                    .good  
+                        img(src="img/goodface_icon.png", alt="よい" id="good")
+                        p 調子がよい
+            .wrapper 
+                h3 食事
+                .btn_container 
+                    .bad
+                        img(src="img/badface_icon.png", alt="わるい" id="bad")
+                        p たべてない
+                    .normal 
+                        img(src="img/normalface_icon.png", alt="ふつう" id="normal")
+                        p 適度にたべた
+                    .good  
+                        img(src="img/goodface_icon.png", alt="よい" id="good")
+                        p たべた
+            .wrapper 
+                h3 メモ
+                input(type="text")
+                .record 
+                    a(href="#") 
+                        p 記録する
+                .space 
+        include footer 
+    script(src="js/record.js")
